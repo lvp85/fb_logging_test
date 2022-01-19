@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01559F7CEA7D0C9CDD31A7AD /* Pods_FbloggigAccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67EFC49F2A325F1D25BB1A8 /* Pods_FbloggigAccount.framework */; };
 		A6CEDDF82796FFAD008CD0BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDDF72796FFAD008CD0BD /* AppDelegate.swift */; };
 		A6CEDDFA2796FFAD008CD0BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDDF92796FFAD008CD0BD /* SceneDelegate.swift */; };
 		A6CEDDFC2796FFAD008CD0BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDDFB2796FFAD008CD0BD /* ViewController.swift */; };
 		A6CEDDFF2796FFAD008CD0BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CEDDFD2796FFAD008CD0BD /* Main.storyboard */; };
 		A6CEDE012796FFAE008CD0BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CEDE002796FFAE008CD0BD /* Assets.xcassets */; };
 		A6CEDE042796FFAE008CD0BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CEDE022796FFAE008CD0BD /* LaunchScreen.storyboard */; };
+		A6CEDE0E279711B8008CD0BD /* getdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDE0D279711B8008CD0BD /* getdata.swift */; };
+		A6CEDE112797120D008CD0BD /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDE0F2797120D008CD0BD /* DataTableViewCell.swift */; };
+		A6CEDE122797120D008CD0BD /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6CEDE102797120D008CD0BD /* DataTableViewCell.xib */; };
+		A6CEDE1427971BEA008CD0BD /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDE1327971BEA008CD0BD /* LoadDataViewController.swift */; };
+		A6CEDE1627975FF6008CD0BD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDE1527975FF6008CD0BD /* DetailViewController.swift */; };
+		A6CEDE182797746F008CD0BD /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CEDE172797746F008CD0BD /* GoogleMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6109B4B0289E9E9E6C62C88A /* Pods-FbloggigAccount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbloggigAccount.debug.xcconfig"; path = "Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount.debug.xcconfig"; sourceTree = "<group>"; };
+		8E1FD7F93A23D8266D00DBEB /* Pods-FbloggigAccount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbloggigAccount.release.xcconfig"; path = "Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount.release.xcconfig"; sourceTree = "<group>"; };
 		A6CEDDF42796FFAD008CD0BD /* FbloggigAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FbloggigAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CEDDF72796FFAD008CD0BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6CEDDF92796FFAD008CD0BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,13 @@
 		A6CEDE002796FFAE008CD0BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6CEDE032796FFAE008CD0BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6CEDE052796FFAE008CD0BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6CEDE0D279711B8008CD0BD /* getdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getdata.swift; sourceTree = "<group>"; };
+		A6CEDE0F2797120D008CD0BD /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		A6CEDE102797120D008CD0BD /* DataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
+		A6CEDE1327971BEA008CD0BD /* LoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
+		A6CEDE1527975FF6008CD0BD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A6CEDE172797746F008CD0BD /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		F67EFC49F2A325F1D25BB1A8 /* Pods_FbloggigAccount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FbloggigAccount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01559F7CEA7D0C9CDD31A7AD /* Pods_FbloggigAccount.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057E214F3C3B8DFB89483417 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6109B4B0289E9E9E6C62C88A /* Pods-FbloggigAccount.debug.xcconfig */,
+				8E1FD7F93A23D8266D00DBEB /* Pods-FbloggigAccount.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5276B46F2C87C8495AEED0AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F67EFC49F2A325F1D25BB1A8 /* Pods_FbloggigAccount.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A6CEDDEB2796FFAD008CD0BD = {
 			isa = PBXGroup;
 			children = (
 				A6CEDDF62796FFAD008CD0BD /* FbloggigAccount */,
 				A6CEDDF52796FFAD008CD0BD /* Products */,
+				057E214F3C3B8DFB89483417 /* Pods */,
+				5276B46F2C87C8495AEED0AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +99,12 @@
 				A6CEDE002796FFAE008CD0BD /* Assets.xcassets */,
 				A6CEDE022796FFAE008CD0BD /* LaunchScreen.storyboard */,
 				A6CEDE052796FFAE008CD0BD /* Info.plist */,
+				A6CEDE0D279711B8008CD0BD /* getdata.swift */,
+				A6CEDE0F2797120D008CD0BD /* DataTableViewCell.swift */,
+				A6CEDE102797120D008CD0BD /* DataTableViewCell.xib */,
+				A6CEDE172797746F008CD0BD /* GoogleMapViewController.swift */,
+				A6CEDE1527975FF6008CD0BD /* DetailViewController.swift */,
+				A6CEDE1327971BEA008CD0BD /* LoadDataViewController.swift */,
 			);
 			path = FbloggigAccount;
 			sourceTree = "<group>";
@@ -74,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6CEDE082796FFAE008CD0BD /* Build configuration list for PBXNativeTarget "FbloggigAccount" */;
 			buildPhases = (
+				E8BBAFFF7C1B1EE5FC6FC345 /* [CP] Check Pods Manifest.lock */,
 				A6CEDDF02796FFAD008CD0BD /* Sources */,
 				A6CEDDF12796FFAD008CD0BD /* Frameworks */,
 				A6CEDDF22796FFAD008CD0BD /* Resources */,
+				8CB32E3903CFE78D23F1CA4D /* [CP] Embed Pods Frameworks */,
+				E0C2C85740D9716396639541 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,10 +173,70 @@
 				A6CEDE042796FFAE008CD0BD /* LaunchScreen.storyboard in Resources */,
 				A6CEDE012796FFAE008CD0BD /* Assets.xcassets in Resources */,
 				A6CEDDFF2796FFAD008CD0BD /* Main.storyboard in Resources */,
+				A6CEDE122797120D008CD0BD /* DataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CB32E3903CFE78D23F1CA4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0C2C85740D9716396639541 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FbloggigAccount/Pods-FbloggigAccount-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8BBAFFF7C1B1EE5FC6FC345 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FbloggigAccount-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A6CEDDF02796FFAD008CD0BD /* Sources */ = {
@@ -139,8 +244,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6CEDDFC2796FFAD008CD0BD /* ViewController.swift in Sources */,
+				A6CEDE112797120D008CD0BD /* DataTableViewCell.swift in Sources */,
+				A6CEDE182797746F008CD0BD /* GoogleMapViewController.swift in Sources */,
 				A6CEDDF82796FFAD008CD0BD /* AppDelegate.swift in Sources */,
 				A6CEDDFA2796FFAD008CD0BD /* SceneDelegate.swift in Sources */,
+				A6CEDE1427971BEA008CD0BD /* LoadDataViewController.swift in Sources */,
+				A6CEDE0E279711B8008CD0BD /* getdata.swift in Sources */,
+				A6CEDE1627975FF6008CD0BD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +394,7 @@
 		};
 		A6CEDE092796FFAE008CD0BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6109B4B0289E9E9E6C62C88A /* Pods-FbloggigAccount.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +423,7 @@
 		};
 		A6CEDE0A2796FFAE008CD0BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E1FD7F93A23D8266D00DBEB /* Pods-FbloggigAccount.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
