@@ -12,7 +12,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var ImageView: UIImageView!
-    @IBOutlet weak var btnlocation: UIBarButtonItem!
+ 
+   
+    @IBOutlet weak var btnLoadGmap: UIBarButtonItem!
+    
     // create variable for catch value (send by segue)
     var lati: String?
     var long: String?
@@ -31,11 +34,12 @@ class DetailViewController: UIViewController {
     }
     
 // create anthorsegue to locate google map
-    @IBAction func load_Seg(_ sender: UIButton) {
+    @IBAction func load_Gmap(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "googleMap", sender: self)
     }
-    
  
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "googleMap"{
              let destinationVC = segue.destination as!

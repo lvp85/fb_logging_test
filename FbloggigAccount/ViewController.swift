@@ -7,73 +7,92 @@
 
 import UIKit
 import FBSDKLoginKit
+import FacebookLogin
 
 class ViewController: UIViewController {
 // loging label
     @IBOutlet weak var loginButton: UIButton!
     // message label
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var btnFbLogOut: UIButton!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblLoadingData: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Facebook logging details
-        updateButton(isLoggedIn: (AccessToken.current != nil))
-        updateMessage(with: Profile.current?.name)
+        logingFbfeild()
+        
     }
 
-
+    func logingFbfeild(){
+        self.btnFbLogOut.isHidden = true
+        self.lblLoadingData.isHidden = true
+        self.messageLabel.isHidden = true
+        self.lblEmail.isHidden = true
+    }
+    @IBAction func logoutBtnAction(_ sender: UIButton) {
+        
+        let logout = LoginManager()
+        logout.logOut()
+        self.loginButton.isHidden = false
+        logingFbfeild()
+    }
     @IBAction func loginButtonTapped(_ sender: Any) {
-        let loginManager = LoginManager()
-        if let _ = AccessToken.current{
-            // Access token available -- user already logged in
-            // Perform log out
-            
-            loginManager.logOut()
-            updateButton(isLoggedIn: false)
-            updateMessage(with: nil)
-            
-        }
-        else{
-            //Access token not available -- user already logged out
-            //Perform log in
-            loginManager.logIn(permissions: [], from: self) { [weak self] (result,error) in
-                guard error == nil else {
-                    print(error!.localizedDescription)
-                    return
-                }
-                // Check for cancel
-                            guard let result = result, !result.isCancelled else {
-                                print("User cancelled login")
-                                return
-                            }
-                // Successfully logged in
-                           
-                            self?.updateButton(isLoggedIn: true)
-                            
-                           
-                            Profile.loadCurrentProfile { (profile, error) in
-                                self?.updateMessage(with: Profile.current?.name)
-                            }
+        self.facebookLogin()
+        getFacebookData()
+    }
+    
+    // Facebook Login Function
+    func facebookLogin() {
+        let loginManger = LoginManager()
+        loginManger.logIn(permissions: [.publicProfile,.email], viewController: self) { result in
+            switch result{
+            case .cancelled :
+                print("User Click On Cancel Buttion")
+            case .failed(let error):
+                print(error.localizedDescription)
+            case .success(_, _, _):
+                self.getFacebookData()
             }
         }
     }
-}
-extension ViewController {
-    
-    private func updateButton(isLoggedIn: Bool) {
-        // 1
-        let title = isLoggedIn ? "Log out 👋🏻" : "Log in 👍🏻"
-        loginButton.setTitle(title, for: .normal)
+    func fbloaddata(){
+        self.loginButton.isHidden = true
+        self.btnFbLogOut.isHidden = false
+        self.messageLabel.isHidden = false
+        self.lblEmail.isHidden = false
+        self.lblLoadingData.isHidden = false
     }
-    
-    private func updateMessage(with name: String?) {
-        // 2
-        guard let name = name else {
-            // User already logged out
-            messageLabel.text = "Please log in with Facebook."
-            return
+    func getFacebookData(){
+        if AccessToken.current != nil {
+            GraphRequest(graphPath: "me", parameters: ["fields" : "id, email,name, picture.type(large)"]).start { connection, result, error in
+                if error == nil {
+                    let dict = result as! [String: AnyObject] as NSDictionary
+                    let name = dict.object(forKey: "name") as! String
+                    let email = dict.object(forKey: "email") as! String
+                   
+                    
+                    print("Name: \(name)")
+                    print("Email: \(email)")
+                   
+                    
+                    print(dict)
+                    
+                    self.messageLabel.text = name
+                    self.lblEmail.text = email
+                    self.fbloaddata()
+                        
+                       
+                    
+                }
+                else{
+                    print(error?.localizedDescription)
+                }
+            }
+            
         }
-        
-        // User already logged in
-        messageLabel.text = "Hello, \(name)!"
+        else{
+            print("Access Token is NIL")
+        }
     }
 }
